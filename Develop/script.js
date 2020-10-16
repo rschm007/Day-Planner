@@ -23,7 +23,6 @@
 
 // define var for current day
 var now = moment();
-console.log(now);
 
 // append currentDay div with the now var
 $("#currentDay").text(now);
