@@ -19,6 +19,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- local stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
@@ -29,12 +31,118 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
       <!-- we need 8 time blocks for 9am - 5pm -->
-      <div class="row">
-
+      <!-- within each row we need to define 3 bootstrap columns for a time indicator, an editable text field with background color, and a save button -->
+      <div id="9am" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">9AM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="9amText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="9amBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="10am" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">10AM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="10amText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="10amBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="11am" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">11AM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="11amText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="11amBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="12pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">12PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="12pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="12pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="1pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">1PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="1pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="1pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="2pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">2PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="2pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="2pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="3pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">3PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="3pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="3pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="4pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">4PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="4pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="4pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
+      </div>
+      
+      <div id="5pm" class="row">
+        <div class="col-2 hour">
+          <p class="text-right">5PM</p>
+        </div>
+        <form id="userInput" class="col-8 past">
+          <textarea id="5pmText" rows="2"></textarea>
+        </form>
+        <div class="col-2 saveBtn">
+          <button id="5pmBtn" class="btn"><i class="fas fa-lock fa-2x"></i></button>
+        </div>
       </div>
     </div>
 
