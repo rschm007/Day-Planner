@@ -22,7 +22,7 @@
 // (all user-inputted data should be saved to localstorage)
 
 // define var for current day
-var now = moment();
+var now = moment().format('LL');
 
 // append currentDay div with the now var
 $("#currentDay").text(now);
