@@ -1,95 +1,43 @@
-# 05 Third-Party APIs: Work Day Scheduler
+Work Day Scheduler
+-----------------------------
 
-## Your Task
+This webapp was designed as part of the UCI Web Development Bootcamp.
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This app uses jQuery and the Moment.js library to allow a user to save events for each hour of the day in a neatly organized table. The table rows change color depending upon if the hour is in the past, present, or future. 
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
-
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+The project has been deployed to GitHub pages. To use the app you can follow the deployment link or download the source files for you to use as a template.
 
 
-## Acceptance Criteria
+Prerequisites
+-----------------------------
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+To install this application you will need a text editor like Visual Studio Code. You will also need to install the Moment.js library (https://momentjs.com/)
 
 
-## Mock-Up
+Summary
+-----------------------------
 
-The following animation demonstrates the application functionality:
+The user is presented with a page containing a header with  the current date, a "clear all text" button, and then a series of labeled rows.
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-1.png" alt="Random-Password-Generator Demo Image" style="max-width:100%;">
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+Upon clicking the button the user is given a series of prompts that help to define the following:
 
+1) How long should your password be?
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-2.png" alt="Random-Password-Generator Demo Image with prompt for password length" style="max-width:100%;">
 
-## Grading Requirements
+2) Do you want upper case characters included?
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-3.png" alt="Random-Password-Generator Demo Image with prompt for upper case letters" style="max-width:100%;">
 
-This homework is graded based on the following criteria: 
+2) Do you want lower case characters included?
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-4.png" alt="Random-Password-Generator Demo Image with prompt for lower case letters" style="max-width:100%;">
 
-### Technical Acceptance Criteria: 40%
+2) Do you want special characters included?
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-5.png" alt="Random-Password-Generator Demo Image with prompt for special characters" style="max-width:100%;">
+2) Do you want numbers included?
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-2.png" alt="Random-Password-Generator Demo Image with prompt for numbers" style="max-width:100%;">
 
-* Satisfies all of the above acceptance criteria plus the following:
+If the user enters the wrong range of numbers for the password then they are alerted and returned to the beginning of the prompts. If they don't choose any categories to include then they are alerted and prompted to begin again.
 
-  * Uses the Moment.js library to work with date and time
+Once the user selects their desired categories, the app randomly generates a password to their specifications and displays the result within the text field. This result is copy + pastable.# Random-Password-Generator
+<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-7.png" alt="Random-Password-Generator Demo Image with password string in text field" style="max-width:100%;">
 
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

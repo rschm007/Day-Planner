@@ -28,7 +28,6 @@ $(document).ready(function () {
 
   // define var for current time and parse it into an integer
   const currentHour = parseInt(moment().format("HH"));
-  //   const currentHour = 12;
   console.log("the current hour is: " + currentHour);
 
   //   create a function that affects all forms. Function needs to change colors of forms based on value of currentHour var
@@ -90,15 +89,8 @@ $(document).ready(function () {
   $("#reset").on("click", function (event) {
     function clearAll() {
       window.localStorage.clear();
-      $("#9amForm").text(null);
-      $("#10amForm").text(null);
-      $("#11amForm").text(null);
-      $("#12pmForm").text(null);
-      $("#1pmForm").text(null);
-      $("#2pmForm").text(null);
-      $("#3pmForm").text(null);
-      $("#4pmForm").text(null);
-      $("#5pmForm").text(null);
+      $("textarea").text("");
+      setTimeout(1000);
     }
     clearAll();
   });
