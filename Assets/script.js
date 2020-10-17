@@ -30,11 +30,30 @@ $(document).ready(function () {
   $("#currentDay").text(now);
 
   // define var for current time and parse it into an integer
-    const currentHour = parseInt(moment().format("HH"));
-//   const currentHour = 12;
+  const currentHour = parseInt(moment().format("HH"));
+  //   const currentHour = 12;
   console.log("the current hour is: " + currentHour);
 
-  //   define vars to change each DOM element
+  //   create a function that affects all forms. Function needs to change colors of forms based on value of currentHour var
+  $("form").each(function () {
+    // define a var that captures the name values of the forms. Needs to be parsed so it reads correctly
+    var formValue = parseInt($(this).attr("name"));
+    // if formvalue is less than the current time, it is in the past, so give it a past attribute
+    if (formValue < currentHour) {
+      $(this).addClass("past");
+    }
+    // if formvalue is greater than the current time, it is in the future, so give it a future attribute
+    if (formValue > currentHour) {
+      $(this).addClass("future");
+    }
+    // if formvalue is the current time, it is in the present, so give it a present attribute
+    if (formValue === currentHour) {
+      $(this).addClass("present");
+    }
+  });
+})
+// begin work on creating localstorage saves and gets for save button clicks
+// define vars containing buttons
   var $row9am = $("#9amForm");
   var $row10am = $("#10amForm");
   var $row11am = $("#11amForm");
@@ -45,22 +64,17 @@ $(document).ready(function () {
   var $row4pm = $("#4pmForm");
   var $row5pm = $("#5pmForm");
 
-    //   create a function that affects all forms. Function needs to change colors of forms based on value of currentHour var
-  $("form").each(function() {
-    // define a var that captures the name values of the forms. Needs to be parsed so it reads correctly
-    var formValue = parseInt($(this).attr("name"));
-    // if formvalue is less than the current time, it is in the past, so give it a past attribute
-    if (formValue < currentHour) {
-        $(this).addClass("past");
-    }
-    // if formvalue is greater than the current time, it is in the future, so give it a future attribute
-    if (formValue > currentHour) {
-        $(this).addClass("future")
-    }
-    // if formvalue is the current time, it is in the present, so give it a present attribute
-    if (formValue === currentHour) {
-        $(this).addClass("present");
-    }
-
-  })
+// add an event listener for clicking a save button
+$("button").on("click", function(event) {
+    // set items in local storage
+    localStorage.setItem("9am", ($row9am.val()))
+    localStorage.setItem("10am", ($row10am.val()))
+    localStorage.setItem("11am", ($row11am.val()))
+    localStorage.setItem("12pm", ($row12pm.val()))
+    localStorage.setItem("1pm", ($row1pm.val()))
+    localStorage.setItem("2pm", ($row2pm.val()))
+    localStorage.setItem("3pm", ($row3pm.val()))
+    localStorage.setItem("4pm", ($row4pm.val()))
+    localStorage.setItem("5pm", ($row5pm.val()))
 });
+
