@@ -90,6 +90,15 @@ $(document).ready(function () {
   $("#reset").on("click", function (event) {
     function clearAll() {
       window.localStorage.clear();
+      $("#9amForm").text(null);
+      $("#10amForm").text(null);
+      $("#11amForm").text(null);
+      $("#12pmForm").text(null);
+      $("#1pmForm").text(null);
+      $("#2pmForm").text(null);
+      $("#3pmForm").text(null);
+      $("#4pmForm").text(null);
+      $("#5pmForm").text(null);
     }
     clearAll();
   });
