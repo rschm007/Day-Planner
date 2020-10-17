@@ -62,7 +62,7 @@ $(document).ready(function () {
   var $row5pm = $("#5pmForm");
 
   // add an event listener for clicking a save button
-  $("button").on("click", function (event) {
+  $(".saveBtn").on("click", function (event) {
     // set items in local storage
     localStorage.setItem("9am", $row9am.val());
     localStorage.setItem("10am", $row10am.val());
@@ -85,4 +85,12 @@ $(document).ready(function () {
   $("#3pmForm").text(localStorage.getItem("3pm"));
   $("#4pmForm").text(localStorage.getItem("4pm"));
   $("#5pmForm").text(localStorage.getItem("5pm"));
+
+  // define function for clearing all text fields when clear all button is pressed
+  $("#reset").on("click", function (event) {
+    function clearAll() {
+      window.localStorage.clear();
+    }
+    clearAll();
+  });
 });

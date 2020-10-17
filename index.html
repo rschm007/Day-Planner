@@ -30,8 +30,9 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <p id="currentTime" class="lead"></p>
+      <span id="currentDay" class="lead"></span>
+      <hr>
+      <button id="reset" class="btn btn-danger">Clear All Text</button>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
@@ -44,7 +45,7 @@
         <form id="userInput" class="col-8" name="9">
           <textarea id="9amForm" rows="4"></textarea>
         </form>
-        <button id="9amBtn" class="saveBtn">
+        <button id="9amBtn" class="saveBtn" data-text="Save Your Schedule">
           <i class="fas fa-lock fa-2x"></i>
         </button>
       </div>
