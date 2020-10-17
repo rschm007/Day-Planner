@@ -1,29 +1,66 @@
 // let's begin
 // how do we want to structure this?
-// As a User, I want to be able to plan my day 
-// (when app is opened, current day is displayed at top of calendar)
-// 
-// I WANT to be given time blocks for standard business horus AND the option to specify a time range that I want to plan within 
+// As a User, I want to be able to plan my day
+// (when app is opened, current day is displayed at top of calendar) - DONE
+//
+// I WANT to be given time blocks for standard business horus AND the option to specify a time range that I want to plan within
 // (default rows include standard business hours, ie 9am - 5pm. There can also be an input field where the user can change this)
-// 
+//
 // I WANT an easy to use interface that tracks the present time so that I can see at a glance where I am in my day
 // (each time-block row should be color-coded to indicate past, present and future)
-// 
-// I WANT to be able to type in the hour rows so that I can plan my day 
+//
+// I WANT to be able to type in the hour rows so that I can plan my day
 // (each time row should be an editable field)
-// 
+//
 // I WANT to be able to save my edits in each row
 // (each row should have a save button that is inserted after user clicks the row. When save is clicked, data is saved in localstorage)
-// 
-// Once I have planned my day, I WANT to be able to save the page 
+//
+// Once I have planned my day, I WANT to be able to save the page
 // (Have the URL change to a unique ID when the user answers the initial prompt so that the page persists)
-// 
+//
 // IF I EXIT THE PAGE, I want to be able to go right back to what I was doing
 // (all user-inputted data should be saved to localstorage)
 
-// define var for current day
-var now = moment().format('LL');
+// ======================================= begin working JS==============================================
+$(document).ready(function () {
+  // define var for current day
+  const now = moment().format("LL");
 
-// append currentDay div with the now var
-$("#currentDay").text(now);
+  // append currentDay div with the now var
+  $("#currentDay").text(now);
 
+  // define var for current time and parse it into an integer
+    const currentHour = parseInt(moment().format("HH"));
+//   const currentHour = 12;
+  console.log("the current hour is: " + currentHour);
+
+  //   define vars to change each DOM element
+  var $row9am = $("#9amForm");
+  var $row10am = $("#10amForm");
+  var $row11am = $("#11amForm");
+  var $row12pm = $("#12pmForm");
+  var $row1pm = $("#1pmForm");
+  var $row2pm = $("#2pmForm");
+  var $row3pm = $("#3pmForm");
+  var $row4pm = $("#4pmForm");
+  var $row5pm = $("#5pmForm");
+
+    //   create a function that affects all forms. Function needs to change colors of forms based on value of currentHour var
+  $("form").each(function() {
+    // define a var that captures the name values of the forms. Needs to be parsed so it reads correctly
+    var formValue = parseInt($(this).attr("name"));
+    // if formvalue is less than the current time, it is in the past, so give it a past attribute
+    if (formValue < currentHour) {
+        $(this).addClass("past");
+    }
+    // if formvalue is greater than the current time, it is in the future, so give it a future attribute
+    if (formValue > currentHour) {
+        $(this).addClass("future")
+    }
+    // if formvalue is the current time, it is in the present, so give it a present attribute
+    if (formValue === currentHour) {
+        $(this).addClass("present");
+    }
+
+  })
+});
