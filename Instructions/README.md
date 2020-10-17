@@ -18,26 +18,27 @@ Summary
 -----------------------------
 
 The user is presented with a page containing a header with  the current date, a "clear all text" button, and then a series of labeled rows.
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-1.png" alt="Random-Password-Generator Demo Image" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/demo-1.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
-Upon clicking the button the user is given a series of prompts that help to define the following:
+The user is able to enter in their own text within each row.
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/demo-2.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
-1) How long should your password be?
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-2.png" alt="Random-Password-Generator Demo Image with prompt for password length" style="max-width:100%;">
+Upon clicking the save button, the user's input is saved in localStorage and will persist through page resets.
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/demo-3.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
-2) Do you want upper case characters included?
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-3.png" alt="Random-Password-Generator Demo Image with prompt for upper case letters" style="max-width:100%;">
+Should the user want to reset their text, they can click the "Clear All Text" button to clear the localStorage and the text field values. The fields will then reset to show that they are empty.
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/demo-4.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
-2) Do you want lower case characters included?
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-4.png" alt="Random-Password-Generator Demo Image with prompt for lower case letters" style="max-width:100%;">
+The rows will dynamically change color based upon what time it currently is. Grey marks the past, red the present, and green the future.
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/demo-5.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
-2) Do you want special characters included?
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-5.png" alt="Random-Password-Generator Demo Image with prompt for special characters" style="max-width:100%;">
-2) Do you want numbers included?
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-2.png" alt="Random-Password-Generator Demo Image with prompt for numbers" style="max-width:100%;">
+Authors
+-----------------------------
+• Robert Schmahl - <a href="https://github.com/rschm007">GitHub Profile</a>
+<br>
+• UC Irvine Full Stack Web Development
+<br>
 
-If the user enters the wrong range of numbers for the password then they are alerted and returned to the beginning of the prompts. If they don't choose any categories to include then they are alerted and prompted to begin again.
-
-Once the user selects their desired categories, the app randomly generates a password to their specifications and displays the result within the text field. This result is copy + pastable.# Random-Password-Generator
-<img src="https://raw.githubusercontent.com/rschm007/Random-Password-Generator/main/Assets/RPG-7.png" alt="Random-Password-Generator Demo Image with password string in text field" style="max-width:100%;">
-
+Acknowledgements
+-----------------------------
+• UC Irvine Web Development program for providing project requirements and code examples
