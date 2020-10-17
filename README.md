@@ -24,13 +24,13 @@ The user is able to enter in their own text within each row.
 <img src="https://raw.githubusercontent.com/rschm007/Day-Planner/main/Assets/Demo%20Images/demo-2.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
 Upon clicking the save button, the user's input is saved in localStorage and will persist through page resets.
-<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/Demo%Images/demo-3.png" alt="Day Planner Demo Image" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/main/Assets/Demo%20Images/demo-3.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
 Should the user want to reset their text, they can click the "Clear All Text" button to clear the localStorage and the text field values. The fields will then reset to show that they are empty.
-<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/Demo%Images/demo-4.png" alt="Day Planner Demo Image" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/main/Assets/Demo%20Images/demo-4.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
 The rows will dynamically change color based upon what time it currently is. Grey marks the past, red the present, and green the future.
-<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/Assets/Demo%Images/demo-5.png" alt="Day Planner Demo Image" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/rschm007/Day-Planner/main/Assets/Demo%20Images/demo-5.png" alt="Day Planner Demo Image" style="max-width:100%;">
 
 Authors
 -----------------------------
